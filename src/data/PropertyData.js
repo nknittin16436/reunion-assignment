@@ -8,12 +8,36 @@ const PropertyData = [
         dateAvailable: "2023-02-22"
     },
     {
+        name: "Uphaar Villa",
+        location: "DLF GURGAON",
+        imageUrl: "https://d3oo9u3p09egds.cloudfront.net/rental_property/colina-villa-h/01_Facade__10_.jpeg",
+        price: 8000,
+        propertyType: "Villa",
+        dateAvailable: "2023-03-22"
+    },
+    {
         name: "Nand Kumar Home",
         location: "Sector 4 Gurgaon",
         imageUrl: "https://s3images.zee5.com/wp-content/uploads/2021/08/individual-houses-villas.jpg",
         price: 5500,
         propertyType: "Villa",
         dateAvailable: "2023-03-22"
+    },
+    {
+        name: "Reunion House",
+        location: "Cyber Park Banglore",
+        imageUrl: "https://teja8.kuikr.com//r1/20210203/ak_950_494440668-1612338104_700x700.jpeg",
+        price: 5500,
+        propertyType: "House",
+        dateAvailable: "2023-03-22"
+    },
+    {
+        name: "Reunion Villa",
+        location: "Cyber Park Banglore",
+        imageUrl: "https://teja8.kuikr.com//r1/20210203/ak_950_494440668-1612338104_700x700.jpeg",
+        price: 9000,
+        propertyType: "Villa",
+        dateAvailable: "2023-02-22"
     },
     {
         name: "Nittin homes",
@@ -29,6 +53,14 @@ const PropertyData = [
         imageUrl: "https://images.moneycontrol.com/static-mcnews/2017/05/real-estate-Luxury-home-770x433.jpg?impolicy=website&width=770&height=431",
         price: 2500,
         propertyType: "Plot",
+        dateAvailable: "2023-03-30"
+    },
+    {
+        name: "Ganpati House",
+        location: "delhi",
+        imageUrl: "https://cdn.lecollectionist.com/lc/production/uploads/photos/house-1898/2022-07-13-52b0a2c0813f2c2760f41f2e6602995e.jpg?q=65",
+        price: 2500,
+        propertyType: "House",
         dateAvailable: "2023-03-30"
     },
     {

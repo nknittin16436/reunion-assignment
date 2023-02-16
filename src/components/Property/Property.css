@@ -48,3 +48,18 @@
     margin: 5vh auto;
     justify-content: center;
 }
+
+
+@media screen and (max-width: 820px) {
+
+    .filter_property_container {
+        flex-direction: column;
+    }
+
+    .filter__item {
+        margin: 10px auto;
+    }
+    .properties__cards__container{
+        grid-template-columns: auto;
+    }
+}

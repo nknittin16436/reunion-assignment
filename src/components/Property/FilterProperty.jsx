@@ -48,7 +48,7 @@ const FilterProperty = ({ setFilterData }) => {
     }
     return (
         <div className='filter_property_container'>
-            <div>
+            <div className="filter__item">
                 <Input
                     style={{ width: 180 }}
                     allowClear
@@ -56,7 +56,7 @@ const FilterProperty = ({ setFilterData }) => {
                     onChange={(e) => handleLocationChange(e)}
                 />
             </div>
-            <div>
+            <div className="filter__item">
                 <DatePicker
                     style={{ width: 180 }}
                     onChange={handleDateChange}
@@ -67,7 +67,7 @@ const FilterProperty = ({ setFilterData }) => {
             </div>
 
 
-            <div>
+            <div className="filter__item">
                 <Space wrap>
                     <Select
                         defaultValue={null}
@@ -84,7 +84,7 @@ const FilterProperty = ({ setFilterData }) => {
                     />
                 </Space>
             </div>
-            <div>
+            <div className="filter__item">
                 <Space wrap>
                     <Select
                         defaultValue={null}
@@ -101,7 +101,7 @@ const FilterProperty = ({ setFilterData }) => {
                     />
                 </Space>
             </div>
-            <div>
+            <div className="filter__item">
                 <Button type="primary" icon={<SearchOutlined />} size={25} onClick={handleFilterSearch}>
                     Search
                 </Button>
