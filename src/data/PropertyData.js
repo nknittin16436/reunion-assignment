@@ -24,6 +24,14 @@ const PropertyData = [
         dateAvailable: "2023-03-22"
     },
     {
+        name: "Reunio Plots",
+        location: "Sector 4 Gurgaon",
+        imageUrl: "https://assets-news.housing.com/news/wp-content/uploads/2022/04/04144614/Types-of-plots-and-various-types-of-housing-plots-in-India-feature-compressed.jpg",
+        price: 3000,
+        propertyType: "Plot",
+        dateAvailable: "2023-02-25"
+    },
+    {
         name: "Reunion House",
         location: "Cyber Park Banglore",
         imageUrl: "https://teja8.kuikr.com//r1/20210203/ak_950_494440668-1612338104_700x700.jpeg",
@@ -119,11 +127,99 @@ const PropertyData = [
         propertyType: "Villa",
         dateAvailable: "2023-02-22"
     },
+    {
+        name: "Ganpati Enclave",
+        location: "chandani chok delhi",
+        imageUrl: "https://ap.rdcpix.com/a0fd81e5f3fa2e068e6b11192b722c38l-m2993741320od-w480_h360_x2.jpg",
+        price: 2500,
+        propertyType: "Villa",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Ganpati Enclave",
+        location: "chandani chok delhi",
+        imageUrl: "https://ap.rdcpix.com/a0fd81e5f3fa2e068e6b11192b722c38l-m2993741320od-w480_h360_x2.jpg",
+        price: 3500,
+        propertyType: "Villa",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Ganpati Enclave",
+        location: "chandani chok delhi",
+        imageUrl: "https://www.pmg-goa.com/images/property/1613039889_img_3740.jpg",
+        price: 4500,
+        propertyType: "Villa",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Ganpati Enclave",
+        location: "Hyderabad",
+        imageUrl: "https://ap.rdcpix.com/a0fd81e5f3fa2e068e6b11192b722c38l-m2993741320od-w480_h360_x2.jpg",
+        price: 5500,
+        propertyType: "Villa",
+        dateAvailable: "2023-0-22"
+    },
+    {
+        name: "Uphaar Enclave",
+        location: "Mumbai",
+        imageUrl: "https://www.pmg-goa.com/images/property/1613039889_img_3740.jpg",
+        price: 6500,
+        propertyType: "Villa",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Ganpati Villa",
+        location: "haujkhas delhi",
+        imageUrl: "https://ap.rdcpix.com/a0fd81e5f3fa2e068e6b11192b722c38l-m2993741320od-w480_h360_x2.jpg",
+
+        price: 7500,
+        propertyType: "Villa",
+        dateAvailable: "2023-03-22"
+    },
+    {
+        name: "Ganpati Villa",
+        location: "chandani chok delhi",
+        imageUrl: "https://ap.rdcpix.com/a0fd81e5f3fa2e068e6b11192b722c38l-m2993741320od-w480_h360_x2.jpg",
+        price: 8500,
+        propertyType: "Villa",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Reunion Plots",
+        location: "chandani chok delhi",
+        imageUrl:"https://cdn.siasat.com/wp-content/uploads/2022/10/plots-1.jpg",
+        price: 8500,
+        propertyType: "Plot",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Reunion Plots",
+        location: "Cyber hub Gurgaon",
+        imageUrl:"https://assets.thehansindia.com/h-upload/2020/06/26/979847-realty-sector.webp",
+        price: 5500,
+        propertyType: "Plot",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Dlf Plots",
+        location: "Cyber hub Gurgaon",
+        imageUrl:"https://www.vatikacollections.com/homes-living-ready/gurgaon/plots-vatika-india-next/images/proj-pic1.jpg?v=1.1",
+        price: 35000,
+        propertyType: "Plot",
+        dateAvailable: "2023-02-22"
+    },
+    {
+        name: "Dlf Villa",
+        location: "Cyber hub Gurgaon",
+        imageUrl:"https://kenthomes.in/wp-content/uploads/2019/10/Kent-Nalukettu-Palm-Villa.jpg",
+        price: 28000,
+        propertyType: "Villa",
+        dateAvailable: "2023-03-22"
+    },
 ]
 
 
 export const fetchProperties = (filterData) => {
-    console.log(filterData)
     let filteredProperties = PropertyData;
     if (filterData.location) {
         filteredProperties = filteredProperties.filter(property => property.location.toLowerCase().includes(filterData.location.toLowerCase()));
@@ -145,6 +241,5 @@ export const fetchProperties = (filterData) => {
     if (filterData.page && filterData.pageSize) {
         filteredProperties = filteredProperties.slice((filterData.page - 1) * filterData.pageSize, filterData.page * filterData.pageSize);
     }
-    console.log(totalProperties, filteredProperties)
     return { filteredProperties, totalProperties };
 }

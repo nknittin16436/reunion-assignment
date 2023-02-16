@@ -80,6 +80,7 @@ const FilterProperty = ({ setFilterData }) => {
                             { value: '{"low":2000,"high":4000}', label: "2000--4000" },
                             { value: '{"low":4000,"high":8000}', label: "4000--8000" },
                             { value: '{"low":8000,"high":10000}', label: "8000--10000" },
+                            { value: '{"low":10000,"high":1000000}', label: ">10000" },
                         ]}
                     />
                 </Space>

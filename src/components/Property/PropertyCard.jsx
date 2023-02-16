@@ -11,9 +11,6 @@ const PropertyCard = ({ property }) => {
         <div className="property__card">
 
             <Card
-                style={{
-                    width: 350,
-                }}
                 cover={
                     <img
                         className="property__image"
