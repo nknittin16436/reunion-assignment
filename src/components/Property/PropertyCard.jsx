@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "antd/dist/antd";
-import { Card, Button, Space, Input, Rate, Typography, Select } from "antd";
+import { Card, Typography } from "antd";
 const { Meta } = Card;
 const { Text } = Typography;
 
@@ -26,12 +26,9 @@ const PropertyCard = ({ property }) => {
                     title={property.name}
                     description={
                         <div>
-                            <div>
-                                <p>{`Location : ${property.address}`}</p>
-                                <p>{`Rent : ${property.price} /month`}</p>
-                            </div>
-
-
+                            <Text>{`Location : ${property.location}`}</Text><br />
+                            <Text>{`Rent : INR ${property.price} /month`}</Text><br />
+                            <Text>{`Type : ${property.propertyType}`}</Text>
                         </div>
                     }
                 />

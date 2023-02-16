@@ -41,3 +41,10 @@
 .property__image {
     height: 25vh;
 }
+
+
+.pagination__container {
+    display: flex;
+    margin: 5vh auto;
+    justify-content: center;
+}
