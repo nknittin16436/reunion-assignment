@@ -1,6 +1,7 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hello I have completed the given assignment Using reactJs and for designing I have used Antd.
+## This app has functionality of filtering various Properties based on filters like location ,data availability , price , and type of property.
+## I have also added pagination for properties.
+[Deployed App](https://reunion-assignment-nand-kumar.vercel.app/)
 
 ## Available Scripts
 
