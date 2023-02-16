@@ -29,7 +29,7 @@ const Properties = () => {
 
     return (
         <div className="properties__homapage">
-            <Title style={{ textAlign: 'center' }}>Welcome to Property Filtering!</Title>
+            <Title style={{ textAlign: 'center' }} className="title__heading">Welcome to Property Filtering!</Title>
             <FilterProperty setFilterData={setFilterData} setPage={setPage} />
             <div className='properties__cards__container'>
                 {properties?.map((property, index) => (
