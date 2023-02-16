@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropertyCard from './PropertyCard';
-import { Pagination } from 'antd';
+import { Button, Pagination } from 'antd';
 import { Typography } from 'antd';
 import FilterProperty from './FilterProperty'
 import { fetchProperties } from '../../data/PropertyData';
@@ -13,7 +13,6 @@ const Properties = () => {
     const [filterData, setFilterData] = useState({});
     const [page, setPage] = useState(1);
     const [totalProperties, setTotalProperties] = useState(0);
-    const [loading, setloading] = useState(false);
 
     const getAllProperties = () => {
         const { filteredProperties, totalProperties } = fetchProperties({ ...filterData, page, pageSize });
@@ -36,7 +35,7 @@ const Properties = () => {
                 {properties?.map((property, index) => (
                     <PropertyCard property={property} key={index} />
                 ))}
-                {properties && properties.length===0 && <Title style={{ textAlign: 'center' }} className="title__heading">No Property for given filter</Title>}
+                {properties && properties.length === 0 && <Title style={{ textAlign: 'center' }} className="title__heading">No Property for given filter</Title>}
             </div>
             <div className='pagination__container'>
                 <Pagination
@@ -46,6 +45,9 @@ const Properties = () => {
                     onChange={(page) => setPage(page)}
                     showSizeChanger={false}
                 />
+            </div>
+            <div className='footer'>
+                <Button type="link" onClick={() => window.open('https://nandkumar.me', '_blank', 'noreferrer')}> Nand Kumar</Button>
             </div>
         </div >
     )
