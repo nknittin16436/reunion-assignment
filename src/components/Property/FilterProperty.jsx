@@ -3,7 +3,7 @@ import moment from 'moment/moment';
 import React, { useState } from 'react'
 import { SearchOutlined } from '@ant-design/icons';
 
-const FilterProperty = ({ setFilterData }) => {
+const FilterProperty = ({ setFilterData, setPage }) => {
 
     const [location, setLocation] = useState("");
     const [date, setDate] = useState("");
@@ -43,6 +43,7 @@ const FilterProperty = ({ setFilterData }) => {
     }
 
     const handleFilterSearch = () => {
+        setPage(1);
         setFilterData({ location, date, price, propertyType });
         console.log(location, date, price, propertyType);
     }

@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import PropertyCard from './PropertyCard';
 import { Pagination } from 'antd';
+import { Typography } from 'antd';
+import FilterProperty from './FilterProperty'
 import { fetchProperties } from '../../data/PropertyData';
 import './Property.css'
+const { Title } = Typography;
 const pageSize = 6;
-const Properties = ({ filterData }) => {
+const Properties = () => {
 
     const [properties, setProperties] = useState([]);
+    const [filterData, setFilterData] = useState({});
     const [page, setPage] = useState(1);
     const [totalProperties, setTotalProperties] = useState(0);
 
@@ -25,6 +29,8 @@ const Properties = ({ filterData }) => {
 
     return (
         <div className="properties__homapage">
+            <Title style={{ textAlign: 'center' }}>Welcome to Property Filtering!</Title>
+            <FilterProperty setFilterData={setFilterData} setPage={setPage} />
             <div className='properties__cards__container'>
                 {properties?.map((property, index) => (
                     <PropertyCard property={property} key={index} />
