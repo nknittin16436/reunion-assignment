@@ -45,13 +45,12 @@ const FilterProperty = ({ setFilterData, setPage }) => {
     const handleFilterSearch = () => {
         setPage(1);
         setFilterData({ location, date, price, propertyType });
-        console.log(location, date, price, propertyType);
     }
     return (
         <div className='filter_property_container'>
             <div className="filter__item">
                 <Input
-                    style={{ width: 180 }}
+                    style={{ width: 160 }}
                     allowClear
                     placeholder="Enter Location"
                     onChange={(e) => handleLocationChange(e)}
@@ -59,7 +58,7 @@ const FilterProperty = ({ setFilterData, setPage }) => {
             </div>
             <div className="filter__item">
                 <DatePicker
-                    style={{ width: 180 }}
+                    style={{ width: 160 }}
                     onChange={handleDateChange}
                     disabledDate={(current) => {
                         return moment().add(-1, "days") >= current;
@@ -73,7 +72,7 @@ const FilterProperty = ({ setFilterData, setPage }) => {
                     <Select
                         defaultValue={null}
                         placeholder="Price Range"
-                        style={{ width: 180 }}
+                        style={{ width: 160 }}
                         allowClear
                         onChange={handlePriceRangeChange}
                         options={[
@@ -91,7 +90,7 @@ const FilterProperty = ({ setFilterData, setPage }) => {
                     <Select
                         defaultValue={null}
                         placeholder="Type of Property"
-                        style={{ width: 180 }}
+                        style={{ width: 160 }}
                         allowClear
                         onChange={handlePropertyTypeChange}
                         options={[

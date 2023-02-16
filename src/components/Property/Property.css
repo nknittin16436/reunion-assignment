@@ -51,12 +51,10 @@
     justify-content: center;
 }
 
-.footer{
-    width: 50%;
+.footer {
+    width: 300px;
     margin: auto;
 }
-
-
 
 @media screen and (max-width: 820px) {
 

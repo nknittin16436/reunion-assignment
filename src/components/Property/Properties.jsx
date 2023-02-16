@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropertyCard from './PropertyCard';
-import { Button, Pagination } from 'antd';
-import { Typography } from 'antd';
+import { Pagination, Typography } from 'antd';
 import FilterProperty from './FilterProperty'
 import { fetchProperties } from '../../data/PropertyData';
 import './Property.css'
@@ -29,7 +28,6 @@ const Properties = () => {
 
     return (
         <div div className="properties__homapage" >
-            <Title style={{ textAlign: 'center' }} className="title__heading">Welcome to Property Filtering!</Title>
             <FilterProperty setFilterData={setFilterData} setPage={setPage} />
             <div className='properties__cards__container'>
                 {properties?.map((property, index) => (
@@ -45,9 +43,6 @@ const Properties = () => {
                     onChange={(page) => setPage(page)}
                     showSizeChanger={false}
                 />
-            </div>
-            <div className='footer'>
-                <Button type="link" onClick={() => window.open('https://nandkumar.me', '_blank', 'noreferrer')}> Nand Kumar</Button>
             </div>
         </div >
     )
