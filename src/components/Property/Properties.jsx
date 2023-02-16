@@ -13,6 +13,7 @@ const Properties = () => {
     const [filterData, setFilterData] = useState({});
     const [page, setPage] = useState(1);
     const [totalProperties, setTotalProperties] = useState(0);
+    const [loading, setloading] = useState(false);
 
     const getAllProperties = () => {
         const { filteredProperties, totalProperties } = fetchProperties({ ...filterData, page, pageSize });
@@ -28,13 +29,14 @@ const Properties = () => {
 
 
     return (
-        <div className="properties__homapage">
+        <div div className="properties__homapage" >
             <Title style={{ textAlign: 'center' }} className="title__heading">Welcome to Property Filtering!</Title>
             <FilterProperty setFilterData={setFilterData} setPage={setPage} />
             <div className='properties__cards__container'>
                 {properties?.map((property, index) => (
                     <PropertyCard property={property} key={index} />
                 ))}
+                {properties && properties.length===0 && <Title style={{ textAlign: 'center' }} className="title__heading">No Property for given filter</Title>}
             </div>
             <div className='pagination__container'>
                 <Pagination
