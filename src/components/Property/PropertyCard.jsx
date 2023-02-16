@@ -25,7 +25,8 @@ const PropertyCard = ({ property }) => {
                         <div>
                             <Text>{`Location : ${property.location}`}</Text><br />
                             <Text>{`Rent : INR ${property.price} /month`}</Text><br />
-                            <Text>{`Type : ${property.propertyType}`}</Text>
+                            <Text>{`Type : ${property.propertyType}`}</Text><br />
+                            <Text>{`Available from : ${property.dateAvailable}`}</Text>
                         </div>
                     }
                 />

@@ -37,7 +37,13 @@ const Properties = () => {
                 ))}
             </div>
             <div className='pagination__container'>
-                <Pagination current={page} total={totalProperties} pageSize={pageSize} onChange={(page) => setPage(page)} />
+                <Pagination
+                    current={page}
+                    total={totalProperties}
+                    pageSize={pageSize}
+                    onChange={(page) => setPage(page)}
+                    showSizeChanger={false}
+                />
             </div>
         </div >
     )
